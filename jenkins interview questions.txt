@@ -1,0 +1,118 @@
+Jenkins Interview Questions
+Just commit changes to the SCR (Source Code Repository) and Jenkins can automate the rest of the process for you with the help of plugins. So that makes it a very important DevOps tool. There is a high possibility that you encounter many Jenkins questions if you go for a DevOps job interview. Below are the most frequently asked Jenkins interview questions. I have collected these questions after doing a lot of research and after discussing with some DevOps experts who are directly involved in the hiring process. Curious to know more about Jenkins check out this Jenkins blog series.
+This Jenkins Interview Questions blog is a part of parent blog DevOps Interview Questions. It includes all the DevOps Stages. 
+First question in this Jenkins Interview Questions blog has to be:
+DevOps Interview Questions and Answers | DevOps Training | 
+Q1. What is Jenkins?
+My suggestion is to start this answer by giving a definition of Jenkins.
+Jenkins is an open source automation tool written in Java with plugins built for Continuous Integration purpose. Jenkins is used to build and test your software projects continuously making it easier for developers to integrate changes to the project, and making it easier for users to obtain a fresh build. It also allows you to continuously deliver your software by integrating with a large number of testing and deployment technologies.
+Once you have defined Jenkins give an example, you can refer the below mentioned use case:
+First, a developer commits the code to the source code repository. Meanwhile, the Jenkins server checks the repository at regular intervals for changes.
+Soon after a commit occurs, the Jenkins server detects the changes that have occurred in the source code repository. Jenkins will pull those changes and will start preparing a new build.
+If the build fails, then the concerned team will be notified.
+If built is successful, then Jenkins deploys the built in the test server.
+After testing, Jenkins generates a feedback and then notifies the developers about the build and test results.
+It will continue to check the  source code repository for changes made in the source code and the whole process keeps on repeating.
+
+Interviewer now knows what is Jenkins but why we use it, there are many other CI tools as well, so why Jenkins?, the next question in this Jenkins interview questions will deal with that answer.
+Q2. What are the benefits of using Jenkins?
+I will suggest you to include the following benefits of Jenkins, if you can recall any other benefit apart from the below mentioned points you can include that as well.
+At integration stage, build failures are cached.
+For each change in the source code an automatic build report notification is generated.
+To notify developers about build report success or failure, it is integrated with LDAP mail server.
+Achieves continuous integration agile development and test driven development.
+With simple steps, maven release project is automated.
+Easy tracking of bugs at early stage in development environment than production.
+Interviewer: Okay Jenkins looks like a really cool tool, but what are the requirements for using Jenkins?
+Q3. What are the pre-requisites for using Jenkins?
+Answer to this is pretty straightforward To use Jenkins you require:
+A source code repository which is accessible, for instance, a Git repository.
+A working build script, e.g., a Maven script, checked into the repository.
+Remember, you have mentioned Plugins in your previous answer, so next question in this Jenkins interview questions blog will be regarding Plugins.
+Q4. Mention some of the useful plugins in Jenkins?
+Below I have mentioned some important Plugins:
+Maven 2 project
+Git
+Amazon EC2
+HTML publisher
+Copy artifact
+Join
+Green Balls
+
+These Plugins I feel are the most useful plugins, if you want to include any other Plugin that is not mentioned above, you can add that as well, but make sure you first mention the above stated plugins and then add your own.
+Q5. Mention what are the commands you can use to start Jenkins manually?
+For this answer I will suggest you to go with the below mentioned flow:
+
+
+To start Jenkins manually open Console/Command line, then go to your Jenkins installation directory. Over there you can use the below commands:
+To start Jenkins: jenkins.exe start
+To stop Jenkins: jenkins.exe stop
+To restart Jenkins: jenkins.exe restart
+Q6. Explain how you can set up Jenkins job?
+My approach to this answer will be to first mention how to create Jenkins job.
+Go to Jenkins top page, select “New Job”, then choose “Build a free-style software project”.
+Now you can tell the elements of this freestyle job:
+Optional SCM, such as CVS or Subversion where your source code resides.
+Optional triggers to control when Jenkins will perform builds.
+Some sort of build script that performs the build (ant, maven, shell script, batch file, etc.) where the real work happens.
+Optional steps to collect information out of the build, such as archiving the artifacts and/or recording javadoc and test results.
+Optional steps to notify other people/systems with the build result, such as sending e-mails, IMs, updating issue tracker, etc..
+Q7. Explain how to create a backup and copy files in Jenkins?
+Answer to this question is really direct.
+To create a backup all you need to do is to periodically back up your JENKINS_HOME directory. This contains all of your build jobs configurations, your slave node configurations, and your build history. To create a back-up of your Jenkins setup, just copy this directory. You can also copy a job directory to clone or replicate a job or rename the directory.
+Learn Jenkins With DevOps Now
+Q8. How will you secure Jenkins?
+The way I secure Jenkins is mentioned below, if you have any other way to do it than mention that:
+Ensure global security is on.
+Ensure that Jenkins is integrated with my company’s user directory with appropriate plugin.
+Ensure that matrix/Project matrix is enabled to fine tune access.
+Automate the process of setting rights/privileges in Jenkins with custom version controlled script.
+Limit physical access to Jenkins data/folders.
+Periodically run security audits on same.
+I hope you have enjoyed the above set of Jenkins interview questions, the next set of questions will be more challenging, so be prepared.
+Q9 Explain how you can deploy a custom build of a core plugin?
+Below are the steps to deploy a custom build of a core plugin:
+Stop Jenkins.
+Copy the custom HPI to $Jenkins_Home/plugins.
+Delete the previously expanded plugin directory.
+Make an empty file called <plugin>.hpi.pinned.
+Start Jenkins.
+Q10. What is the relation between Hudson and Jenkins?
+You can just say Hudson was the earlier name and version of current Jenkins. After some issue, the project name was changed from Hudson to Jenkins.
+Q11. What you do when you see a broken build for your project in Jenkins?
+There can be multiple answers to this question I will approach this task in the following way:
+I will open the console output for the broken build and try to see if any file changes were missed. If I am unable to find the issue that way, then I will clean and update my local workspace to replicate the problem on my local and try to solve it.
+
+
+If you do it in a different way then just mention that in your answer.
+Q12. Explain how you can move or copy Jenkins from one server to another?
+I will approach this task by copying the jobs directory from the old server to the new one. There are multiple ways to do that, I have mentioned it below:
+
+
+You can:
+Move a job from one installation of Jenkins to another by simply copying the corresponding job directory.
+Make a copy of an existing job by making a clone of a job directory by a different name.
+Rename an existing job by renaming a directory. Note that if you change a job name you will need to change any other job that tries to call the renamed job.
+Q13. What are the various ways in which build can be scheduled in Jenkins?
+You can schedule a build in Jenkins in the following ways:
+By source code management commits
+After completion of other builds
+Can be scheduled to run at specified time ( crons )
+Manual Build Requests
+Q14. What is the difference between Maven, Ant and Jenkins?
+Maven and Ant are Build Technologies whereas Jenkins is a continuous integration tool.
+Q15. Which SCM tools Jenkins supports?
+Below are Source code management tools supported by Jenkins:
+AccuRev
+CVS,
+Subversion,
+Git,
+Mercurial,
+Perforce,
+Clearcase
+RTC
+Now, the next set of Jenkins interview questions will test your experience with Jenkins.
+Q16. What are the two components Jenkins is mainly integrated with?
+According to me Jenkins is mainly integrated with the following:
+Version Control system like GIT,SVN.
+Build tools like Apache Maven.

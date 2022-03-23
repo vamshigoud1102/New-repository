@@ -1,0 +1,15 @@
+ description = "specify the cidr for myvpc :"
+}
+
+variable "mysubnet_cidr" {
+  description = "specify the cidr for subnet1 :"
+}
+resource "aws_subnet" "mysubnet1" {
+  cidr_block = var.mysubnet_cidr
+  vpc_id = aws_vpc.myvpc.id
+  availability_zone = "ap-southeast-1a"
+  tags = {
+    Name = "mysubnet1"
+  }
+}
+
